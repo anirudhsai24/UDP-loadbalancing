@@ -4,7 +4,7 @@
   become: yes
   roles:
     - application
-- hosts: haproxy
+- hosts: HAproxy
   become: yes
   roles:
     - haproxy
