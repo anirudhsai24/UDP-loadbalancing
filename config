@@ -1,0 +1,47 @@
+
+PasswordAuthentication no
+StrictHostKeyChecking no
+
+
+Host bastionNSO
+  HostName 103.57.72.82
+  User ubuntu
+  Port 22
+  IdentityFile /home/anirudh24/.ssh/id_rsa
+  PasswordAuthentication no
+
+
+Host devhaproxy
+  HostName 10.1.0.94
+  User ubuntu
+  Port 22
+  IdentityFile /home/anirudh24/.ssh/id_rsa
+  ProxyJump bastionNSO
+
+
+Host devA
+  HostName 10.1.0.100
+  User ubuntu
+  Port 22
+  IdentityFile /home/anirudh24/.ssh/id_rsa
+  ProxyJump bastionNSO 
+
+
+Host devB
+  HostName 10.1.0.58
+  User ubuntu
+  Port 22
+  IdentityFile /home/anirudh24/.ssh/id_rsa
+  ProxyJump bastionNSO 
+
+
+Host devC
+  HostName 10.1.0.119
+  User ubuntu
+  Port 22
+  IdentityFile /home/anirudh24/.ssh/id_rsa
+  ProxyJump bastionNSO 
+
+
+
+
