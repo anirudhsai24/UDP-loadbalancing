@@ -28,7 +28,7 @@
     state: latest
     update_cache: true
 
-- name: insatall snmpd
+- name: install snmpd
   apt:
     name: snmpd
     state: latest
